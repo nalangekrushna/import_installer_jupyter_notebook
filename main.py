@@ -1,4 +1,9 @@
-import re, sys, json, warnings, pkgutil
+import re 
+import sys
+import json
+import warnings
+import pkgutil
+import subprocess
 warnings.filterwarnings("ignore")
 
 data = ''
@@ -24,3 +29,12 @@ pkg_util_set = set([ i[1] for i in pkgutil.iter_modules(None) ])
 lib_set = lib_set | pkg_util_set
 install_set = import_set-lib_set
 print('package list to install '+str(install_set))
+
+failed_list = []
+for package in install_set :
+    try :
+        subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+    except subprocess.CalledProcessError as e : 
+        failed_list.append(package)
+
+print('following packages failed to install. Please check and install them manually. '+str(failed_list))
