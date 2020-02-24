@@ -4,3 +4,5 @@
 3. python unit tests. 
 4. debug mode with extra logs.
 5. Add this same functionality for .py files. (This is big one. Could be seperate module.)
+6. Convert code to a class (High Priority.)                 done.
+7. Convert project to python package on Pypi.
