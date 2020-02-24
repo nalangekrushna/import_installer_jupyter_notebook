@@ -54,7 +54,7 @@ def run(fileName=None) :
             else :
                 print('following packages failed to install. Please check and install them manually. '+str(failed_list))
 
-if __name__ == '__main__' :
+if __name__ == '__jupyter_installer__' :
 #def main(*args) :
 
     
