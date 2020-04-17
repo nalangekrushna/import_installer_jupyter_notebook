@@ -1,6 +1,6 @@
 """finds all import in jupyter notebook, check if they are alredy present if not then install it."""
 
-__version__ = '1.0'
+__version__ = '1.0.1'
 
 import re 
 import sys
