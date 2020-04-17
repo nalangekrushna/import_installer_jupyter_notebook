@@ -16,7 +16,7 @@ def run(fileName=None) :
     if fileName == None :
         print('No file name provided so exiting the program.')
     else :
-        with open(fileName) as f :
+        with open(fileName, encoding='utf8') as f :
             data = f.read()
         dic = json.loads(data)
         print(dic.keys())
